@@ -2,10 +2,14 @@
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <title>BlocChat</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sanchez" rel="stylesheet">
+    <title>Bloc Chat</title>
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+    <link rel="stylesheet" type="text/css" href="styles/modal.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
   <ui-view></ui-view>
@@ -21,24 +25,26 @@
   <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+  <!-- AngularUI Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCYcQWvKF4ozc-Rm_tIMleoJamUTkuZ0Og",
-        authDomain: "bloc-chat-1f479.firebaseapp.com",
-        databaseURL: "https://bloc-chat-1f479.firebaseio.com",
-        projectId: "bloc-chat-1f479",
-        storageBucket: "",
-        messagingSenderId: "610886210849"
-      };
-      firebase.initializeApp(config);
+  // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCYcQWvKF4ozc-Rm_tIMleoJamUTkuZ0Og",
+      authDomain: "bloc-chat-1f479.firebaseapp.com",
+      databaseURL: "https://bloc-chat-1f479.firebaseio.com",
+      projectId: "bloc-chat-1f479",
+      storageBucket: "",
+      messagingSenderId: "610886210849"
+    };
+    firebase.initializeApp(config);
     </script>
 
   <!-- Application Files -->
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/Room.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/Room.js"></script>
 </body>
 </html>
