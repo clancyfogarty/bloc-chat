@@ -3,9 +3,9 @@
     <h3 class="modal-title">Create New Chat Room </h3>
   </div>
   <div>
-    <form class="modal-title" ng-submit="modal.createRoom(name)">
-      <input ng-modal="name"/>
-      <button type="submit">Create Room</button>
+    <form class="modal-title">
+      <input ng-model="modal.name"/>
+      <button type="submit" ng-click="modal.createRoom()">Create Room</button>
       <button type="button-area" ng-click="modal.cancel()">Cancel</button>
     </form>
   </div>

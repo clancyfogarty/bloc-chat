@@ -10,9 +10,6 @@
         controller: 'ModalCtrl as modal',
         windowClass: 'modal-window'
       });
-      modalInstance.result.then(function(name){
-      Room.addRoom(name);
-      });
     };
 
      this.setCurrentRoom = function(room) {
