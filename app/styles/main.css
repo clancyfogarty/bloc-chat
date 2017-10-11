@@ -59,8 +59,13 @@ button[type=button]{
   float: none;
 }
 
-input:focus{
-  color: clue;
+input {
+     width: 200px;
+ }
+
+input:focus {
+      color: blue;
+     width: 200px;
 }
 
 .modal-title{
@@ -84,5 +89,9 @@ input:focus{
   margin-left: 20%;
   margin-top: 15%;
   display: inline-block;
+}
+
+.modal-content {
+     width: 475px;
 }
 */
