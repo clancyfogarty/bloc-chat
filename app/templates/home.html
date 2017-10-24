@@ -1,4 +1,4 @@
- <section class="sidebar">
+<section class="sidebar">
   <h1 class="site-title">Bloc Chat</h1>
   <button class="button" type="button" ng-click="home.open()">Add Room</button>
    <div ng-repeat="room in home.rooms">
@@ -11,6 +11,12 @@
      <div ng-repeat="messages in home.messages">
       <div class="username"><strong>{{ messages.username }}:</strong> {{ messages.content }}
       </div>
-      <div class="sent-at">{{ messages.sentAt }}</div>
+      <div class="sent-at">{{ messages.sentAt | date:"shortTime" }}</div>
     </div>
+</section>
+
+<section ng-hide="!home.currentRoom" class="send-messages">
+  <hr>
+    <input class="message-input" type="text" name="input" placeholder="Type Message Here..." class ng-model='home.newMessage.content'>
+    <button class="send-button" type="button" ng-click="home.sendMessage()">Send</button>
 </section>
